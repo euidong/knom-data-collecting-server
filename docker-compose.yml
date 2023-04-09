@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  video-100:
+    image: justicedong/torture-selenium:400.0.1
+    command: |
+      --instance-url=https://knom.koreacentral.cloudapp.azure.com:8443 \
+      --room-name-prefix=test100 \
+      --conferences=1 \
+      --audio-senders=2 \
+      --senders=2 \
+      --cores-per-client=1.5 \
+      --duration=600
+    volumes:
+      - /dev/shm:/dev/shm
+
